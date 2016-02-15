@@ -1,0 +1,51 @@
+<script type="text/javascript">
+
+ 
+</script>
+<head>
+
+
+<script type="text/javascript">
+ 
+</script>
+
+  <meta http-equiv="X-UA-Compatible"content="IE=11; IE=10;IE=9; IE=8; IE=7; IE=EDGE">
+  <meta charset="utf-8">
+</head>
+<title>主页</title>
+
+<div class="bigvotelist" style="clear:both;margin-top:0px;width:100%;min-height:1600px;
+
+" >  
+
+
+
+
+<div class="pagecontent" style="margin-left:3%;width:90%;padding:10px;min-height:1350px;" > 
+
+<include file="Vote:votelist"  />
+
+
+ </div>
+ <div style="clear:both;margin-left:60px;height:50px;margin-top:10px;">
+<for start="0" end="39"  step="9"  name="pageno" >
+<span class="pagechange" id="{$pageno/9+1}" onclick=pagechangejs({$pageno}) > 
+第{$pageno/9+1}页
+</span>  
+
+
+</for>  <!--  循环输出页数标签 -->
+<input id="pageinput"  style="width:50px;"  >
+<button onclick=pagechangejs() style='display:inline'>跳转</button>
+</div>
+
+
+
+</div>
+
+
+ 
+
+
+
+

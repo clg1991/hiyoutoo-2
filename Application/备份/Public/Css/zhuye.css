@@ -1,0 +1,147 @@
+ *{margin:0;padding:0;font-family:"微软雅黑"}
+
+
+
+.voteoption {
+	height:30px;
+border-radius:5px;
+  color: white;
+ margin-bottom:10px;
+ text-align:left;
+ font-size:15px;
+ padding:5px;
+ background-color:rgba(0,0,0,0.6);
+ border:none;
+}
+.votetitle {
+	border-radius:5px;
+	cursor:default;
+border-bottom:1px dotted red;
+font-size:17px;
+padding:5px;
+  
+ margin-bottom:10px;
+
+ background-color:rgba(0,0,0,0.6);
+ border:none;
+ color: white;
+}
+    
+
+.voteoption:hover {
+	
+	cursor:pointer;
+ background-color:#FF8247;
+
+}
+
+   
+
+.votediv{	
+width:100%;
+height:390px;
+
+margin-top:0px;
+padding:20px;
+
+
+
+
+
+	
+}
+
+
+
+
+
+
+.commentshow{
+	cursor:default;
+
+font-size:22px;
+padding:5px;
+  
+ 
+
+ background-color:rgba(0,0,0,0.3);
+ border:none;
+ color: white;
+
+	width:100%;
+	height:40px;
+	
+	
+}
+
+#pagechange-module{
+	clear:both;
+	margin-left:20px;
+	height:50px;
+	margin-top:10px;
+	
+}
+@media (max-width:767px) {
+#pagechange-module{
+	clear:both;
+	margin-left:20px;
+	width:85%;
+	padding:11px;
+	height:80px;
+	margin-top:10px;
+	
+	
+}
+#pageinput{
+	
+	margin-top:15px
+}
+
+
+	}
+
+
+.pagechange   /* 页数按钮 */
+{
+	 cursor:default;
+	background-color:white;
+	padding:5px;
+	border:1px solid white;
+	margin-right:5px
+	
+}
+
+.pagechange:hover   /* 页数按钮 */
+{
+	cursor:pointer;
+	border:1px solid #FF8247;
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

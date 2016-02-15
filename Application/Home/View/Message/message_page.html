@@ -1,0 +1,87 @@
+
+
+
+
+
+<div style='border:1px solid red'>
+
+<html ng-app="techNodeApp">
+<head>
+
+
+
+  <meta charset="UTF-8">
+  <title>TechNode</title>
+<script language="javascript" type="text/javascript" src="/chat4/public/socketio.js"></script>
+
+
+  <link rel="stylesheet" href="/chat4/public/bower_components/angular/angular-csp.css"/>
+  <link rel="stylesheet" href="/chat4/public/styles/room.css">
+  <link rel="stylesheet" href="/chat4/public/styles/dialog.css">
+
+  <script type="text/javascript" src="/chat4/public/bower_components/angular/angular.js"></script>
+  <script type="text/javascript" src="/chat4/public/bower_components/angular-route/angular-route.js"></script>
+</head>
+<body>
+
+
+
+
+
+
+
+<div class="container" style="margin-top:100px;">
+  <div class="row" ng-view></div>
+
+
+</div> 
+
+
+ 
+
+<script type="text/javascript"> user_account = $(".useraccount").text(); </script>
+<script type="text/javascript" src="/chat4/public/technode.js"></script>
+<script type="text/javascript" src="/chat4/public/services/socket.js"></script>
+<script type="text/javascript" src="/chat4/public/router.js"></script>
+<script type="text/javascript" src="/chat4/public/directives/auto-scroll-to-bottom.js"></script>
+<script type="text/javascript" src="/chat4/public/directives/ctrl-enter-break-line.js"></script>
+<script type="text/javascript" src="/chat4/public/controllers/room.js"></script>
+
+<script type="text/javascript" src="/chat4/public/controllers/dialog.js"></script>
+<script type="text/javascript" src="/chat4/public/controllers/login.js"></script>
+<script type="text/javascript" src="/chat4/public/controllers/register.js"></script>
+<script type="text/javascript" src="/chat4/public/controllers/message-creator.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+<span>
+<volist name="newmessagelist" id="vo">
+
+
+<br/>
+<button onclick='message_module_show({$vo.writerid})' >
+<img class='avatarimg' src='__PUBLIC__/Img/userifo/avatar/{$vo.writerid}.jpg' onerror="this.src='__PUBLIC__/Img/userifo/avatar/noavatar.jpg'" height='60' width='60'/>
+<br/>
+{$vo.messageyouname}
+
+</button>
+
+
+
+
+
+</volist>
+</span>
+
+<span style='1px solid green;height:600px;width:600px'>
+</span>
+</div>

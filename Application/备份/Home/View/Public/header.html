@@ -1,0 +1,99 @@
+
+<head>
+  <meta http-equiv="X-UA-Compatible"content="IE=11; IE=10;IE=9; IE=8; IE=7; IE=EDGE">
+        <meta charset="utf-8">
+        
+       
+
+      
+
+	<import type='css' file="Css.Zhuye" />
+       
+<script type="text/javascript">
+
+ $(document).ready(function(){
+
+ 
+
+
+});
+
+
+
+  
+
+  
+</script>
+     
+
+</head>
+
+
+<div>
+
+
+
+
+
+
+<php>
+
+
+
+$Model = new \Think\Model();
+
+$userid=SESSION('userid');
+
+ 
+ $condition="select * from vote_message where (substring_index(relationid,'to',1)=$userid and readed=0 and writerid!=$userid)
+
+ or (substring_index(relationid,'to',-1)=$userid and readed=0 and writerid!=$userid)";
+ 
+ 
+ $usernewmessage=$Model->query($condition);
+ 
+ $usernewmessage=count($usernewmessage)
+</php>
+<!-- 以上php查询用户的未读消息数量 -->
+
+
+
+
+<php> 
+
+$senter_user_page=U('center/centershow',array('page_user_id'=>$_SESSION['userid']))  </php>
+
+
+<nav class="navbar navbar-default" role="navigation"  id='navbar' >
+   <div class="navbar-header"  id='youtoo-layout-head'  style='border:none;padding:none'>
+      <button type="button" class="navbar-toggle"  id='youtoo-layout-head-button' data-toggle="collapse" 
+         data-target="#example-navbar-collapse">
+             导航
+      </button>
+   </div>
+   <div class="collapse navbar-collapse" id="example-navbar-collapse" >
+      <ul class="nav navbar-nav" id='navul'>
+         <li class="active"><div class="youtoo-layout-header" style="{$headzhuye}" id="headzhuye" onclick="window.location.href='__MODULE__/index/index'">主页</div> 
+</li>
+       <li><div class="youtoo-layout-header" style="{$centerheader}"  onclick="window.location.href='{$senter_user_page}'" > <php>echo $_SESSION['username']; </php>用户中心</div></li>
+  <li><div class="youtoo-layout-header"  id="headsearch" onclick="window.location.href='__MODULE__/Search/search'">搜索好友</div></li>
+         
+<li><div class="youtoo-layout-header"  id="youtoo-layout-header-message" onclick="window.location.href='__MODULE__/Message/message_page'" >消息
+
+
+
+</div> </li>
+<li><div class="youtoo-layout-header"  onclick="window.location.href='__MODULE__/login/logoff'">退出</div> </li>
+       
+      </ul>
+   </div>
+</nav>
+
+
+
+
+
+
+</div>
+
+

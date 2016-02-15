@@ -1,0 +1,92 @@
+<import type='css'  file="Css.center"   basepath="/AA/Application/Public/" />
+<import file="Js.center"   basepath="/AA/Application/Public/" />
+
+<div class="center-module">
+<div class="row" style='width:96%;margin:0 auto;margin-top:60px;'>
+
+<div  class="col-xs-12 col-md-2" style="padding:5px" >
+
+<div class='user-info'>
+
+<div class='avatar-module'> 
+   {$useravatar}
+
+
+
+</div></br>
+{$_SESSION['username']}
+<php> 
+
+       if($page_user_id==$userid)
+       { echo "<a href='/index.php/center/infoedit' style='float:right'>编辑资料</a></br>";}
+       $User=M('User');
+       echo "性别:".$useremail=$User->where("userid=$page_user_id")->getField('sex')."</br>";
+       echo "邮箱:".$useremail=$User->where("userid=$page_user_id")->getField('email')."</br>";
+       echo "qq:".$useremail=$User->where("userid=$page_user_id")->getField('qq')."</br>";
+
+       echo "微信:".$useremail=$User->where("userid=$page_user_id")->getField('weixin')."</br>";
+
+</php>
+</div>
+</div>
+
+<div class="col-xs-12 col-md-6" style="padding:5px">
+<div class='user-trace'>
+
+<volist name="voterecord" id="vtr">
+
+<if condition="$time lt ($vtr['time']+3200)">
+
+{$vtr.username}刚刚参与了投票
+<span class='layout-center-votename'>
+
+<php>
+$Content=M('Content');
+$optioncontent=$Content->where("voteno=$vtr[voteno]")->getField("votename");
+echo $optioncontent;
+</php>
+</span>
+ 选择了选项
+<span class='layout-center-option'>
+<php>
+$Content=M('Content');
+$optioncontent=$Content->where("voteno=$vtr[voteno]")->getField("option".$vtr['optionno']);
+echo $optioncontent;
+</php>
+</span>
+<else />
+
+
+
+
+{$vtr.username}在{$vtr.time}时参与了投票
+<span class='layout-center-votename'>
+<php>
+$Content=M('Content');
+$optioncontent=$Content->where("voteno=$vtr[voteno]")->getField("votename");
+echo $optioncontent;
+</php>
+</span>
+ 选择了选项
+<span class='layout-center-option'>
+<php>
+$Content=M('Content');
+$optioncontent=$Content->where("voteno=$vtr[voteno]")->getField("option".$vtr['optionno']);
+echo $optioncontent;
+</php>
+</span>
+</if>
+
+<br/>
+</volist>
+</div>
+</div>
+
+<div class="col-xs-12 col-md-4" style="padding:5px">
+<div id='friend-trace'>
+</div>
+</div>
+</div>
+
+
+</div>

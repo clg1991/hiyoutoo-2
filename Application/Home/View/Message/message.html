@@ -1,0 +1,51 @@
+<import type='css' file="Css.message" basepath="/AA/Application/Public" />
+<import type='css' file="Css.jScrollbar" basepath="/AA/Application/Public" /> <!-- 滚动条相关CSS -->
+
+<div class='message-big' id={$relationid}  youuserid={$youuserid} youusername={$youusername}>
+
+<div class="jScrollbar3" >
+	<div class="jScrollbar_mask">
+       <div class='message-content' >
+           
+             <volist name="list" id="vo">
+
+		         <if condition="$vo.writerid eq $userid ">
+			             <div class="memessage">{$vo.content}</div></br>
+                         <else /><div class="youmessage">{$vo.content}</div></br>
+                 </if>
+		 
+             
+            </volist>
+
+      </div>
+  
+    </div> 
+    <div class="jScrollbar_draggable">
+		<a href="#" class="draggable"></a>
+	</div>
+	<div class="clr"></div>
+ </div>
+
+<div class='message-input'     contenteditable="true">
+</div>
+<button class='message-input-button'  id={$relationid} >发送</button>
+</div>
+
+<div class="message-module"  id={$relationid} youusername={$youusername}>
+</div>
+
+
+<script type="text/javascript">                                           
+	$(document).ready(function(){
+
+
+	  var a = jQuery.noConflict(true);
+
+		$('.jScrollbar, .jScrollbar2, .jScrollbar3, .jScrollbar4, .jScrollbar5').jScrollbar();
+
+
+		window.$ =window.jQuery = a ;
+
+	});                                        
+</script>  
+

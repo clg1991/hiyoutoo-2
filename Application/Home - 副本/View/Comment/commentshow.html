@@ -1,0 +1,44 @@
+
+ 
+ <title>{$votetitle}</title>
+
+
+
+
+<import type='css'  file="Css.comment"   basepath="/AA/Application/Public/" />
+
+
+
+
+<div class="comment-page" id={$voteno} style='margin:0px;width:80%;border:1px solid blue'>
+<div class="row" >
+ <div class="col-xs-12 col-sm-12 col-md-12 col-lg-5"  style='height:600px;border:1px solid green' >
+<div class="comment-vote-show" >
+
+<div style="posotion:absolute;width:100%;height:440px;float:left;padding:6px;margin-bottom:10px;">
+<include file="Vote:vote"  voteno="{$voteno}"   /> </div></div>
+</div>
+ <div class="col-xs-12 col-sm-12 col-md-12 col-lg-5"  style='min-height:3000px;border:1px solid red' >
+ 
+ 
+<div id={$voteno} class="comment-module" >       <!-- 评论列表和输入框 -->
+<div class="comment-input-module">
+
+<form action="" method="get"  > 
+    <textarea class="comment-input" id='8888' cols="60" rows="6"  style="color:gray;float:left;resize:none" maxlength="300" >输入评论</textarea>  
+	<input class="comment-upload-button" type="button"  value="发表" onclick="commentinsert({$voteno})"></input> 
+</form>  
+</div></br>
+
+<div class="comment-content-module" >
+
+</div> <!-- 评论列表结束 -->
+<div class='comment-more' style='clear:both;'>更多</div></br>
+
+</div>
+</div>
+</div>
+</div>
+<!-- {$voteno} --> 
+
+<import file="Js.comment"   basepath="/AA/Application/Public/" />

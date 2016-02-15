@@ -1,0 +1,84 @@
+
+
+<php>	$Content = M("Content");   
+		 $optionweizhi=array();
+          $votename  = $Content->where('voteno='.$voteno)->getField('votename');
+		  
+		  							$con = mysql_connect("localhost","root","");
+if (!$con)
+  {
+  die('Could not connect: ' . mysql_error());
+  
+  }
+
+mysql_select_db("mysql", $con);
+
+
+$result = mysql_query("SELECT * FROM vote_record
+WHERE username=$_SESSION[username] AND voteno=$voteno");
+while($row = mysql_fetch_array($result))
+  {
+  $yixuan=$row['optionno'];
+ 
+  }
+
+		  
+                for ($optionno=1; $optionno<=7; $optionno++)  //循环赋值投票选项
+				   {
+					   if   ($optioncontent = $Content->where('voteno='.$voteno)->getField('option'.$optionno))
+					       {
+						   
+							
+						 	
+					       
+							 $voteshuzu['voteno']=$voteno;
+							 $voteshuzu['optionno']=$optionno;
+							 $bcimgid=$voteno;
+
+
+
+							
+						     
+							if($optionno==$yixuan)
+							{
+							  $optionweizhi[$optionno]  = "<button  voteno="."$voteno"." optionno="."$optionno"." class='voteoption' style='background-color:#FF8247'
+							 onclick='biaodantijiao("."$voteno".",$optionno".")'	
+							>"."$optioncontent"."</button></br>";
+							
+							}
+							  else{
+							  $optionweizhi[$optionno]  = "<button voteno="."$voteno"." optionno="."$optionno"." class='voteoption'
+							 onclick='biaodantijiao("."$voteno".",$optionno".")'	
+							>"."$optioncontent"."</button></br>";
+							  }
+							  
+						   }
+						  
+					   else { break;}
+					  
+				   } //投票项目循环赋值结束
+				 
+				    
+         </php>
+
+<div id={$voteno} class="votediv" style="background:url('__PUBLIC__/Img/vote/{$bcimgid}.jpg')" >
+
+<p class="votetitle">
+ {$votename}
+</p>
+
+{$optionweizhi[1]}
+{$optionweizhi[2]}
+{$optionweizhi[3]}
+{$optionweizhi[4]}
+{$optionweizhi[5]}
+{$optionweizhi[6]}
+{$optionweizhi[7]}
+<p votetishiid={$voteno} style="background-color:rgba(255,130,71,0.5);color:white;border:none;display:none;padding:5px" ></p>
+
+
+
+</div> 
+
+
+

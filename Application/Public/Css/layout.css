@@ -1,0 +1,197 @@
+
+*{
+
+
+  list-style-type:none;
+}
+
+
+
+#navbar{
+ 
+  position:fixed;
+  top:0px;
+  z-index:1000;
+  border:none;
+  background-color: rgba(0,0,0,0);
+  height:auto;
+  padding:none
+
+}
+#navbar:hover{
+
+  border:none;
+}
+#navul
+{
+
+  margin-top:0px;
+}
+
+.youtoo-layout-header{
+	
+    height:35px;
+	  bottom:0px;
+    text-decoration:none;
+    padding-top:0px;
+    margin-top:10px;
+    margin-left:20px;
+    font-size:22px;
+    background-color:#99CC33;
+    color:white;
+    cursor:pointer;
+   
+}
+#youtoo-layout-head{
+
+    position:fixed;
+
+    background-color:#99CC33;
+    border:none;
+    height:45px;
+    width:100%;
+    padding-top:20px;
+    top:0px;
+  
+  
+  
+}
+
+@media (max-width:700px){
+
+
+  #navul
+{
+
+  margin-top:0px;
+  padding-top:10px;
+}
+.youtoo-layout-header{
+	
+    height:35px;
+	  bottom:0px;
+    text-decoration:none;
+    text-align:center;
+    padding-top:0px;
+    width:100%;
+    margin-top:0px;
+    margin-left:0px;
+    border-top:1px solid #99CC33;
+    font-size:22px;
+    background-color:#99CC33;
+    color:white;
+    cursor:pointer;
+   
+}
+
+
+#youtoo-layout-head{
+
+    position:fixed;
+
+    background-color:#99CC33;
+    border:none;
+    height:45px;
+    width:100%;
+    padding-top:5px;
+    top:0px;
+    z-index:1010;
+  
+  
+  
+}
+
+} 
+
+
+
+
+
+
+
+
+
+
+#youtoo-layout-head-button{
+      background-color:#99CC33;
+      width:80px;
+      padding:0px;
+      margin:5px;
+      color:white;
+      font-size:17px;
+      font-size:17px
+      z-index:1001;
+
+
+}
+
+#example-navbar-collapse
+{
+  border:none;
+  position:fixed;
+  top:0px;
+  width:100%;
+  z-index:1000
+
+}
+
+
+@media (max-width:767px){
+
+  #example-navbar-collapse
+ {
+    border:none;
+    position:fixed;
+    top:35px;
+    width:100%;
+    z-index:1000
+
+}
+
+
+
+}
+
+.foot{  
+	
+	bottom:0px;
+	height:61px;
+	color:white;
+	background-color:#99CC33;
+	
+
+}
+.youtoo-layout-header-visted{
+  height:35px;
+  text-decoration:none;
+  padding-top:0px;
+  font-size:22px;
+  margin-left:20px;
+  margin-top:10px;
+  background-color:#99CC33;
+  border-bottom:5px solid #FF8247;
+  color:white;
+  cursor:pointer;
+
+}
+
+@media (max-width:767px){.youtoo-layout-header-visted{
+  height:35px;
+  text-align:center;
+  text-decoration:none;
+  padding-top:0px;
+  font-size:22px;
+  margin-top:0px;
+  margin-left:0px;
+  background-color:#99CC33;
+  border-bottom:5px solid #FF8247;
+  color:white;
+  cursor:pointer;
+
+   
+}} 
+
+.youtoo-layout-header:hover {
+	cursor:pointer;
+  border-bottom:5px solid #FF8247;
+}

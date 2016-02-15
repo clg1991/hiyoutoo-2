@@ -1,0 +1,15 @@
+<div class='comment-content-little' style="margin-left:20px;">
+<volist name="commentlist" id="vo" offset="0" length='36'  >
+
+<div class="comment-module-list-user" id='{$vo.commentid}'><span style='color:#FF8247'>{$vo.username}</span>
+
+<span style="float:right;font-size:10px;text-align:right" >{$vo.time}
+<span   class="delet-comment-button" 
+onclick="commentdelet('{$vo.commentid}')"  >&nbsp{$vo.deletable}
+</div>
+
+<article class="comment-module-list-content">{$vo.comment}</article>
+
+<div style="clear:both" ></div>
+</volist>
+</div>

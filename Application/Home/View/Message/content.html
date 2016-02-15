@@ -1,0 +1,8 @@
+<volist name="list" id="vo">
+		    <if condition="$vo.writerid eq $userid ">
+			             <div class="memessage">{$vo.content}</div></br>
+                         <else /><div class="youmessage">{$vo.content}</div></br>
+            </if>
+		 
+             
+</volist>

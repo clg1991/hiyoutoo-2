@@ -1,0 +1,97 @@
+.center-module{
+     width:100%;
+     min-height:1000px;
+     
+     
+
+}
+#center-left{
+
+	float:left;
+    padding:10px;	
+    border:1px dotted #FFC125	;
+    width:185px;
+    min-height:1000px;
+	display:inline-block;
+
+}
+#center-middle{
+    border:1px dotted #FFC125	;
+    padding:10px;
+    margin-left:5px;
+    width:700px;
+    min-height:1000px;
+	display:inline-block;
+}
+#center-right{
+    border:1px dotted #FFC125	;
+    padding:10px;
+    width:250px;
+    min-height:1000px;
+	display:inline-block;
+}
+
+.avatar-module{
+	  display:inline-block;
+      height:150px;
+      width:150px;
+      background-color:#888888;
+}
+.avatar-module a{
+position:absolute;
+top:120px;
+left:100px;
+color:white;
+cursor:pointer;
+z-index:88
+
+
+}
+.user-info{
+  display:inline-block;
+  border:1px solid orange;
+  padding:5px;
+    width:100%;
+    height:600px;
+}
+.user-trace{
+	display:inline-block;
+
+	border:1px solid orange;
+  padding:5px;
+    min-height:1000px;
+    width:100%;
+}
+.layout-center-votename{
+
+  color:orange;
+}
+.layout-center-option{
+
+  color:orange;
+}
+
+#friend-trace{
+	display:inline-block;
+
+	border:1px solid orange	;
+  padding:5px;
+    min-height:1000px;
+    width:100%;
+}
+
+
+
+
+
+
+
+
+/*以下为资料修改页面相关CSS*/
+.infoedit-input{
+  width:200px;
+position:relative;
+margin: 0 auto; 
+
+
+}

@@ -1,0 +1,22 @@
+<php>	
+        $Content = M("Content");   
+        $maxvoteno  = $Content->max('voteno'); 
+		
+				
+</php>
+  <import type='css' file="Css.Zhuye" basepath="/AA/Application/Public/" />
+<div class="row">
+
+<for start="empty($liststart)?0:$liststart" end="$liststart+9" step="1" name="jjj" >
+<div class="col-xs-12 col-sm-12 col-md-4"  >
+
+<div  style="posotion:absolute;width:100%;height:440px;float:left;padding:6px;margin-bottom:10px;">
+
+  <assign name="voteno" value="$maxvoteno-$jjj" />
+  <include file="Vote:vote"    />
+ <button onclick=window.open('__MODULE__/comment/commentshow/voteno/{$voteno}','_blank') 
+ class="commentshow" >评论</button>
+  </div>
+
+  </div>
+</for></div>

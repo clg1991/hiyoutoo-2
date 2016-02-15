@@ -1,0 +1,36 @@
+<import type='css'  file="Css.center"   basepath="/AA/Application/Public/" />
+
+<div class="center-module">
+
+<div id='center-left'>
+<div class='avatar-module'> 
+   {$useravatar}
+</div>
+<div class='user-info'>
+{$_SESSION['username']}
+<php> 
+
+       if($page_user_id==$userid)
+       { echo "<a href='/index.php/center/infoedit' style='float:right'>修改资料</a></br>";}
+       $User=M('User');
+       echo "性别:".$useremail=$User->where("userid=$page_user_id")->getField('sex')."</br>";
+       echo "邮箱:".$useremail=$User->where("userid=$page_user_id")->getField('email')."</br>";
+       echo "qq:".$useremail=$User->where("userid=$page_user_id")->getField('qq');
+
+
+</php>
+</div>
+</div>
+
+<div id='center-middle'>
+<div class='user-trace'>
+</div>
+</div>
+
+<div id='center-right'>
+<div id='friend-trace'>
+</div>
+</div>
+
+
+</div>

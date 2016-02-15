@@ -1,0 +1,28 @@
+
+
+
+
+
+<div style='border:1px solid red'>
+<span>
+<volist name="newmessagelist" id="vo">
+
+
+<br/>
+<button onclick='message_module_show({$vo.writerid})' >
+<img class='avatarimg' src='__PUBLIC__/Img/userifo/avatar/{$vo.writerid}.jpg' onerror="this.src='__PUBLIC__/Img/userifo/avatar/noavatar.jpg'" height='60' width='60'/>
+<br/>
+{$vo.messageyouname}
+
+</button>
+
+
+
+
+
+</volist>
+</span>
+
+<span style='1px solid green;height:600px;width:600px'>
+</span>
+</div>

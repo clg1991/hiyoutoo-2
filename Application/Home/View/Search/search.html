@@ -1,0 +1,66 @@
+
+
+
+<head>
+
+<meta http-equiv="X-UA-Compatible"content="IE=11; IE=10;IE=9; IE=8; IE=7; IE=EDGE">
+<meta charset="utf-8">
+<import type='css' file="Css.jScrollbar" basepath="/AA/Application/Public" /> <!-- 滚动条相关CSS -->
+</head>
+
+
+<script type="text/javascript">
+
+
+
+
+ $(document).ready(function(){
+ 
+
+ 
+$(".lolo").css({"border":"1px solid red"});
+
+});
+
+
+function changeheader()
+  {
+       document.getElementById('headsearch').className = "youtoo-layout-header-visted";
+
+  }
+  window.onload=changeheader;
+  
+</script>
+<div>
+<div style="margin:20px;border:1px solid green">
+  </br>在这里搜索与你志趣相投的好朋友
+  </br>
+  </br>
+
+  <foreach name="list" item="vo" key="kusername">
+
+  {$haha}
+     用户  <span    style='cursor:default'  >{$kusername}
+     <php>
+     $User=M('User');
+     $youuserid=$User->where('username='.$kusername)->getField('userid');
+     </php>
+     <button onclick="msmoduleshow('{$youuserid}')">聊天</button></span>    与你在   {$vo} 个投票中选择相同选项  
+  </br>
+  </foreach></br>
+
+
+{$haha}
+
+</div>
+</div>
+<div>
+
+</div>
+                        
+<import file="js.gundongtiao.jquery-ui"   basepath="/AA/Application/Public" /> <!-- 滚动条相关JS -->
+<import file="js.gundongtiao.jquery-mousewheel"   basepath="/AA/Application/Public" /><!-- 滚动条相关JS -->
+<import file="js.gundongtiao.jScrollbar"   basepath="/AA/Application/Public" /> <!-- 滚动条相关JS -->
+ 
+
+                                                        

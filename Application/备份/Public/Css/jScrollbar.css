@@ -1,0 +1,111 @@
+.clr {
+	clear:both;
+	height:0
+}
+
+
+/***************/
+/** EXEMPLE 3 **/
+/***************/
+.jScrollbar3 {	
+
+    background-color:#6495ED;
+
+	clear:both;
+	width:248px;
+	min-height:289px;
+	overflow:hidden;
+	position:relative;
+	
+	z-index:102;
+}
+
+@media (max-width:767px) { 
+.jScrollbar3 {	
+
+    background-color:#6495ED;
+
+	clear:both;
+	width:100%;
+	min-height:289px;
+	overflow:hidden;
+	position:relative;
+	
+	z-index:102;
+}
+
+}
+
+
+.jScrollbar3 .jScrollbar_mask {
+	background-color:#6495ED;
+		overflow:hidden;
+		clear:both;
+		width:245px;
+		margin-right:0px;
+		position:absolute;
+		top:0;
+		float:left;
+		
+	}
+@media (max-width:767px) {
+	.jScrollbar3 .jScrollbar_mask {
+	background-color:#6495ED;
+		overflow:hidden;
+		clear:both;
+		width:100%;
+		margin-right:0px;
+		position:absolute;
+		top:0;
+		float:left;
+		
+	}
+	
+	
+	
+	}
+	
+	
+		.jScrollbar3 .jScrollbar_mask p {
+			margin:0;
+			padding:0;
+			color:#242424;
+			font-size:12px;
+		}
+	.jScrollbar3 .jScrollbar_draggable {
+		
+		float:right;
+		margin:0;
+	
+		width:6px;
+		min-height:289px;
+		overflow:hidden;
+		background:none;
+		background-color:#6495ED;
+		display:none;
+		
+	}
+	.jScrollbar3 .jScrollbar_draggable a.draggable {
+		position:absolute;
+		bottom:0px;
+		background-color:red;
+		display:block;
+		height:44px;
+		width:6px;
+		margin:0;
+		cursor:default
+	}
+
+	@media (max-width:767px){
+
+.jScrollbar3 .jScrollbar_draggable {
+		
+	display:none;
+		
+	}
+	.jScrollbar3 .jScrollbar_draggable a.draggable {
+display:none;
+	}
+
+	}
+	
